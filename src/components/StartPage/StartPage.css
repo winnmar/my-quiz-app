@@ -1,0 +1,52 @@
+
+.welcome-box{
+    display: flex;
+    min-height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+}
+
+.welcome-text{
+    margin: 16px;
+}
+
+.start-button{
+    background-color: rgba(46, 231, 123, 0.904); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+
+.start-button span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.start-button span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.start-button:hover span {
+    padding-right: 25px;
+  }
+
+.start-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}

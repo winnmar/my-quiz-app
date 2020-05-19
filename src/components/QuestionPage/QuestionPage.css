@@ -1,0 +1,13 @@
+.question-box{
+    display: flex;
+    min-height: 60vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: white;
+}
+
+.question-text{
+    margin: 16px;
+}
