@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 import ReactHtmlParser from 'react-html-parser';
 import './QuestionPage.css'
+import { Answers } from '../Answers/Answers';
 
 export const QuestionPage = () =>{
     const [questions, setQuestions] = useState();
@@ -24,6 +25,9 @@ export const QuestionPage = () =>{
                 <span>
                     {questions ? ReactHtmlParser(questions[0].question) : 'Brak'}
                 </span>
+            </div>
+            <div>
+                <Answers correctAnswer={questions ? questions[0].correct_answer : ''} incorrectAnswers={questions ? questions[0].incorrect_answers : []}></Answers>
             </div>
         </div>
     )
